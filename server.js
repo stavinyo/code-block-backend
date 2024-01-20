@@ -11,7 +11,7 @@ dotenv.config()
 
 const app = express()
 const server = http.createServer(app)
-// const port = process.env.PORT || 5000 
+const port = process.env.PORT || 3000
 
 const io = new Server(server, {
     cors: {
@@ -73,8 +73,6 @@ io.on('connection', (socket) => {
 
 //'ss'
 
-
-const port = 3030
 server.listen(port, () => {
     console.log(`Server is up and listening to http://localhost:${port}/api/codeblocks`, port)
 })
