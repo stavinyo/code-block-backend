@@ -12,22 +12,45 @@ dotenv.config()
 const app = express()
 const server = http.createServer(app)
 
-const io = new Server(server, {
-    cors: {
-        origin: '*',
-        methods: ['GET', 'POST', 'PUT'],
-        credentials: true,
-    },
-})
-
-
 // Express App Config
 app.use(express.json())
 app.use(express.static('public'))
 
-// CORS configuration
+
+// const io = new Server(server, {
+//     cors: {
+//         origin: '*',
+//         methods: ['GET', 'POST', 'PUT'],
+//         credentials: true,
+//     },
+// })
+
+// // CORS configuration
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static('public'))
+// } else {
+//     const corsOptions = {
+//         origin: [
+//             'http://127.0.0.1:3000',
+//             'http://localhost:3000',
+//             'http://localhost:5173',
+//             'http://127.0.0.1:5173',
+//         ],
+//         credentials: true,
+//         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//         allowedHeaders: 'Content-Type, Authorization',
+//     }
+//     app.use(cors(corsOptions))
+// }
+
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('public'))
+    app.use(express.static('public'));
+    app.use(cors({
+        origin: 'https://code-block-frontend-ymyyedsfi-stav-cohrns-projects.vercel.app',
+        credentials: true,
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        allowedHeaders: 'Content-Type, Authorization',
+    }));
 } else {
     const corsOptions = {
         origin: [
@@ -40,7 +63,7 @@ if (process.env.NODE_ENV === 'production') {
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
         allowedHeaders: 'Content-Type, Authorization',
     }
-    app.use(cors(corsOptions))
+    app.use(cors(corsOptions));
 }
 
 
