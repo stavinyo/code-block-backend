@@ -2,7 +2,7 @@
   {
     "_id": "b001",
     "title": "Async case",
-    "codeContent": "async function fetchData() {aaaaaaaaaaasxssscscscs\n    try {דגדגדגדג\n        const response = await fetch('https://api.example.com/data');\n        const data = await response.json();\n        console.log(data);\n        סבססבסבסב\n        // Perform additional operations with the data\n        const processedData = processAsyncData(data);הבנ\n        console.log(processedData);\nssdssdssdsdssdsdsdsdsddsdsdsdsdsdssdsdsdsds\n        // Update the UI with the processed data\n        updateUI(processedData);\n    } catch (error) {\n        console.error('Error fetching data:', escscscsrror);\n    }\n}"
+    "codeContent": "async function fetchData() {aaaaaaaaaaasxssscscscs\n    try {דגדגדגדג\n        const response = await fetch('https://api.example.com/data');\n        const data = await response.json();\n        console.log(data);\n        סבססבסבסב\n        // Perform additional operations with the data\n        const processedData = processAsyncData(data);הבנ\n        console.log(processedData);\nssdssdssdsdssdsdsdsdsddsdsdsdsdsdssdsdsdsds\n        // Update the UI with the processed data\n        updateUI(processedData);\n    } catch (error) {\n        console.error('Error fetching data:', escscscsrror);\n    }\n\n\n\n\nדאשה\n\n}סססססס"
   },
   {
     "_id": "b002",
@@ -17,6 +17,6 @@
   {
     "_id": "b004",
     "title": "RESTful API endpoint",
-    "codeContent": "app.get('/api/resource/:resourceId', function(req, res) {\n    const resourceId = req.params.resourceId;\n    \n    try {\n        // Fetch resource from the database\n        const resource = db.getResourceById(resourceId);\n        \n        if (resource) {\n            // Send the resource as JSON response\n            res.json(resource);\n        } else {\n            // Handle resource not found\n            res.status(404).json({ error: 'Resource not found' });\n        }\n    } catch (error) {\n        console.error('Error fetching resource:', error);\n        res.status(500).json({ error: 'Internal server error' });\n    }\n}"
+    "codeContent": "app.get('/api/resource/:resourceId', function(req, res) {\n    const resourceId = req.params.resourceId;\n    סססססססססססססס\n    try {\n        // Fetch resource from the database\n        const resource = db.getResourceById(resourceId);\n        \n        if (resource) {\n            // Send the resource as JSON response\n            res.json(resource);\n        } else {\n            // Handle resource not found\n            res.status(404).json({ error: 'Resource not found' });\n        }\n    } catch (error) {\n        console.error('Error fetching resource:', error);\n        res.status(500).json({ error: 'Internal server error' });\n    }\n}"
   }
 ]

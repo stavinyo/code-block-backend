@@ -27,7 +27,7 @@ export async function updateCodeBlock(req, res) {
 }
 
 export async function getCodeBlockById(req, res) {
-    console.log('bababa')
+    console.log("banana")
     try {
         const codeBlockId = req.params.id
         const codeBlock = await codeBlockService.getById(codeBlockId)
