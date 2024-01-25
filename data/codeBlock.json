@@ -20,22 +20,22 @@
         "codeContent": "app.get('/api/resource/:resourceId', function(req, res) {\n    const resourceId = req.params.resourceId;\n    \n    try {\n        // Fetch resource from the database\n        const resource = db.getResourceById(resourceId);\n        \n        if (resource) {\n            // Send the resource as JSON response\n            res.json(resource);\n        } else {\n            // Handle resource not found\n            res.status(404).json({ error: 'Resource not found' });\n        }\n    } catch (error) {\n        console.error('Error fetching resource:', error);\n        res.status(500).json({ error: 'Internal server error' });\n    }\n}"
     },
     {
-        "_id": "c005",
+        "_id": "b005",
         "title": "Object-oriented programming",
         "codeContent": "class Animal {\n    constructor(name, sound) {\n        this.name = name;\n        this.sound = sound;\n    }\n\n    makeSound() {\n        console.log(`${this.name} says ${this.sound}`);\n    }\n}\n\nconst dog = new Animal('Dog', 'Woof!'); dog.makeSound();"
     },
     {
-        "_id": "c006",
+        "_id": "b006",
         "title": "Functional programming",
         "codeContent": "const numbers = [1, 2, 3, 4, 5];\nconst doubledNumbers = numbers.map(number => number * 2);\nconsole.log(doubledNumbers);"
     },
     {
-        "_id": "c007",
+        "_id": "b007",
         "title": "Middleware in Express.js",
         "codeContent": "const express = require('express');\nconst app = express();\n\napp.use((req, res, next) => {\n    console.log('Middleware executed!');\n    next();\n});\n\napp.get('/', (req, res) => {\n    res.send('Hello, Express!');\n});\n\napp.listen(3000, () => {\n    console.log('Server listening on port 3000');\n});"
     },
     {
-        "_id": "c008",
+        "_id": "b008",
         "title": "React Component",
         "codeContent": "import React, { Component } from 'react';\n\nclass MyComponent extends Component {\n    constructor(props) {\n        super(props);\n        this.state = {\n            message: 'Hello, React!'\n        };\n    }\n\n    render() {\n        return (\n            <div>\n                <p>{this.state.message}</p>\n            </div>\n        );\n    }\n}\n\nexport default MyComponent;"
     },
